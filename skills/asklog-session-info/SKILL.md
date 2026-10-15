@@ -23,7 +23,7 @@ An array; one object per session.
 | `agentStatus`, `statusSeq`, `statusChangedAt` | the agent's state (`working`, `blocked`, `done`, `idle`, `unknown`), a change counter, and when it last changed |
 | `detectedAgent` | the agent CLI the daemon sees in the foreground right now (for example `claude`, `codex`), or `null` |
 | `agent` | how it was launched with `--agent`: `profile`, and `resume` (`available` means `asklog resume` can bring it back) |
-| `agentMode` | `normal` or `yolo` |
+| `agentMode` | `normal` or `yolo` for a session started with `--agent`; `null` for a plain shell |
 | `agentAccount` | the stored account it runs on (`provider`, `id`, `label`) |
 | `chat` | present when the app can show the session as a chat |
 | `chiefBinding` | present on Chief, Lead and Worker sessions: `role` is `worker` for a Worker and `chief` for Chief and Leads (a Lead has a non-null `parentDispatchId`), plus `taskId`, `dispatchId`, `generation` |
@@ -51,7 +51,7 @@ asklog layout list --json | jq -r '.workspaces[] | .name as $w | .. | objects | 
 asklog layout list --workspace <name-or-id> --json
 ```
 
-`asklog layout info <tab-or-pane-id> --json` returns one pane (or tab) with its `tabId`, `focused`, and the full session object, so it is the quickest way from a pane id to everything about what runs in it.
+`asklog layout info <tab-or-pane-id> --json` returns one pane (or tab) with its `tabId`, `focused`, and the full session object (`null` once `asklog ls` no longer lists that session), so it is the quickest way from a pane id to everything about what runs in it.
 
 ## Accounts and machine
 

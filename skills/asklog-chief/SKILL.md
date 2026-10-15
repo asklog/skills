@@ -26,7 +26,7 @@ The daemon is the only writer of Chief's state. Agents act through the `asklog_c
 
 ## As Chief or a Lead
 
-You run in Chief's or a Lead's folder; its `CLAUDE.md`/`AGENTS.md` is your charter and outranks other instruction files. The folder also carries built-in skills (`asklog-settings`, `asklog-layout`, `asklog-landing`, and `asklog-machines` on multi-machine accounts): load those for config, layout, merge, cleanup and promote.
+You run in Chief's or a Lead's folder; its `CLAUDE.md`/`AGENTS.md` is your charter and outranks other instruction files. The folder also carries built-in skills (`asklog-settings`, `asklog-layout`, `asklog-landing`, and in Chief's folder on an account with more than one machine, `asklog-machines`): load those for config, layout, merge, cleanup and promote.
 
 Every change takes a fresh UUID `requestId`; reuse it when you retry the same change.
 
