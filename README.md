@@ -25,21 +25,7 @@ npx skills add asklog/skills --skill asklog-panes   # just one
 npx skills add asklog/skills --list          # see what is here
 ```
 
-Or by hand: clone this repository and copy or symlink the folders under `skills/` into your agent's skills folder.
-
-```sh
-git clone https://github.com/asklog/skills.git ~/src/asklog-skills
-
-# Claude Code, for your user (or .claude/skills inside one project):
-mkdir -p ~/.claude/skills
-ln -s ~/src/asklog-skills/skills/asklog-* ~/.claude/skills/
-
-# Codex and other agents that read .agents/skills, inside one project:
-mkdir -p .agents/skills
-ln -s ~/src/asklog-skills/skills/asklog-* .agents/skills/
-```
-
-Symlinks pick up updates with a `git pull`; copies do not.
+Without Node: clone this repository and copy the folders under `skills/` into `.claude/skills` (Claude Code) or `.agents/skills` (Codex and others).
 
 Inside asklog's own Chief and Lead folders, asklog already writes its built-in `asklog-settings`, `asklog-layout`, `asklog-landing` and `asklog-machines` skills. The skills here use different names, so the two sets sit side by side.
 

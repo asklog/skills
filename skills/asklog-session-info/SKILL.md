@@ -60,7 +60,7 @@ asklog layout list --workspace <name-or-id> --json
 - `asklog reach --json` - whether the machine is reachable from outside its own network.
 - `asklog devices --json` - devices that can reach this machine.
 
-These name accounts and devices, and `whoami --json` includes the machine's credential: read the fields you need and never paste the raw output anywhere.
+These name accounts and devices, and `whoami --json` carries the account email and the host's public key: read the fields you need and never paste the raw output anywhere.
 
 ## Chief
 

@@ -49,7 +49,13 @@ asklog layout new-tab --workspace <name-or-id> --command 'htop' --json | jq '{se
 asklog read "$sid" --lines 40
 ```
 
-To find a session that is already in a pane, read the pane's `content.session` from `asklog layout info <pane-id> --json`, or match on `cwd`/`title` in `asklog ls --json` and **confirm with the person** if more than one matches.
+To find a session that is already in a pane, read it from `asklog layout info <pane-id> --json`, which answers `{pane: {id, tabId, focused, title, content, session}, workspaceId}`:
+
+```sh
+asklog layout info "$pane" --json | jq -r .pane.content.session
+```
+
+Otherwise match on `cwd`/`title` in `asklog ls --json` and **confirm with the person** if more than one matches.
 
 ## 4. Send it text
 
