@@ -41,7 +41,7 @@ asklog layout new-tab --workspace <name-or-id> --command 'htop' --json | jq '{se
 - `--agent` and `--command` are exclusive. `--cwd` defaults to the workspace folder.
 - Pass `--request-id <uuid>` and reuse it on a retry: a repeated request returns the same pane instead of making a second one.
 - `asklog new --workspace <ws> --place right --beside <session>` also works, but placement is best effort (only a window that is open and showing that workspace honours it). `layout split` is exact.
-- Inside a Chief or Lead folder, add `--capability "$ASKLOG_CHIEF_CAPABILITY"` to `asklog layout` commands (see `asklog-chief`).
+- Inside Chief's folder, add `--capability "$ASKLOG_CHIEF_CAPABILITY"` to `asklog layout` commands (see `asklog-chief`).
 
 ## 3. Read another pane
 
