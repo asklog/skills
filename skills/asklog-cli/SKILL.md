@@ -23,7 +23,7 @@ asklog runs terminal sessions and AI coding agents in panes on a machine, served
 | Split a pane and start something in it | `asklog layout split <pane-id> right\|down --command '...' --json` |
 | Put an agent back on its conversation after a crash | `asklog resume <session>` |
 | Stored Claude/Codex accounts and rate-limit use | `asklog agents list --json` |
-| Chief, asklog's orchestrator | `asklog chief`, `asklog lead <workspace>`, `asklog chief config` |
+| Chief, asklog's orchestrator | `asklog chief`, `asklog chief config` |
 
 Agent profiles for `--agent`: `claude-code`, `codex`, `grok`, `cursor`, `opencode`, `gemini`, `pi`, `agy`. `--yolo` starts the agent with no permission prompts; `--normal` (the default) keeps them.
 
