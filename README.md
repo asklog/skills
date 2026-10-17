@@ -10,7 +10,7 @@ Each skill is a folder with a `SKILL.md` in the open [Agent Skills](https://agen
 | [`asklog-panes`](skills/asklog-panes/SKILL.md) | find your own pane, split it, start a command or agent beside you, read and type into another pane, wait for it, close it safely |
 | [`asklog-drive-agent`](skills/asklog-drive-agent/SKILL.md) | hand a prompt to another agent in a session and wait for its turn to end using `agentStatus` and `statusSeq` |
 | [`asklog-session-info`](skills/asklog-session-info/SKILL.md) | know what asklog reports about sessions, agents, workspaces, tabs, panes and accounts, with `jq` one-liners |
-| [`asklog-chief`](skills/asklog-chief/SKILL.md) | work with or as Chief, Leads and Workers: talking to Chief, starting a Lead, settings, and the `asklog_chief` tool's requests, dispatch, steering and reports |
+| [`asklog-chief`](skills/asklog-chief/SKILL.md) | work with or as Chief and its Workers: talking to Chief, settings, and the `asklog_chief` tool's requests, dispatch, steering and reports |
 
 The examples use `jq` and a bash or zsh shell.
 
@@ -27,7 +27,7 @@ npx skills add asklog/skills --list          # see what is here
 
 Without Node: clone this repository and copy the folders under `skills/` into `.claude/skills` (Claude Code) or `.agents/skills` (Codex and others).
 
-Inside asklog's own Chief and Lead folders, asklog already writes its built-in `asklog-settings`, `asklog-layout`, `asklog-landing` and `asklog-machines` skills. The skills here use different names, so the two sets sit side by side.
+Inside asklog's own Chief folder, asklog already writes its built-in `asklog-settings`, `asklog-layout`, `asklog-landing` and `asklog-machines` skills. The skills here use different names, so the two sets sit side by side.
 
 ## Contributing
 
