@@ -26,7 +26,7 @@ An array; one object per session.
 | `agentMode` | `normal` or `yolo` for a session started with `--agent`; `null` for a plain shell |
 | `agentAccount` | the stored account it runs on (`provider`, `id`, `label`) |
 | `chat` | present when the app can show the session as a chat |
-| `chiefBinding` | present on Chief, Lead and Worker sessions: `role` is `worker` for a Worker and `chief` for Chief and Leads (a Lead has a non-null `parentDispatchId`), plus `taskId`, `dispatchId`, `generation` |
+| `chiefBinding` | present on Chief and Worker sessions: `role` is `worker` for a Worker and `chief` for Chief, plus `taskId`, `dispatchId`, `generation` |
 | `cols`, `rows`, `createdAt` | size and age |
 
 ```sh
@@ -65,7 +65,7 @@ These name accounts and devices, and `whoami --json` carries the account email a
 ## Chief
 
 - `asklog chief config --json` - every Chief setting, its value, the layer it comes from and who set it. `asklog chief config keys` explains each key.
-- Chief, Lead and Worker sessions show up in `asklog ls` like any other; Worker sessions carry `chiefBinding` and run in `<repo>/.asklog-worktrees/<task-id>/` by default.
+- Chief and Worker sessions show up in `asklog ls` like any other; Worker sessions carry `chiefBinding` and run in `<repo>/.asklog-worktrees/<task-id>/` by default.
 
 ## Screen contents
 
