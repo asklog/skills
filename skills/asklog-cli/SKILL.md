@@ -21,11 +21,12 @@ asklog runs terminal sessions and AI coding agents in panes on a machine, served
 | Kill a session | `asklog kill <session>` |
 | Tabs and panes | `asklog layout list --json`, `asklog layout info <pane-id> --json` |
 | Split a pane and start something in it | `asklog layout split <pane-id> right\|down --command '...' --json` |
+| Rename, move, close, group or resize tabs and panes | `asklog layout rename-tab`, `move`, `close-pane`, `group`, `resize` ... (see `asklog-layout`) |
 | Put an agent back on its conversation after a crash | `asklog resume <session>` |
 | Stored Claude/Codex accounts and rate-limit use | `asklog agents list --json` |
 | Chief, asklog's orchestrator | `asklog chief`, `asklog chief config` |
 
-Agent profiles for `--agent`: `claude-code`, `codex`, `grok`, `cursor`, `opencode`, `gemini`, `pi`, `agy`. `--yolo` starts the agent with no permission prompts; `--normal` (the default) keeps them.
+Agent profiles for `--agent`: `claude-code`, `codex`, `grok`, `cursor`, `opencode`, `gemini`, `pi`, `agy`. Agents start in YOLO mode (no permission prompts) by default wherever the agent has one; `--normal` keeps the agent's own prompts, `--yolo` asks for YOLO explicitly. Older asklog versions defaulted to normal.
 
 `asklog attach <session>` is interactive (detach with Ctrl-]); an agent should use `read` and `send` instead.
 
@@ -52,4 +53,5 @@ asklog layout split "$pane" right --command 'npm test' --json | jq '{sessionId, 
 - **`restored`** in `asklog ls` means the daemon died and came back: the scrollback was recovered but the shell is new. `asklog resume <id>` reattaches a Claude or Codex agent to its conversation.
 - **`send` to an exited session fails** on purpose; `read` still works while the daemon lists it.
 - **Killing a session closes its pane.** Kill only sessions you started, by the id you recorded.
+- **Never arrange the asklog window with computer use.** Every tab and pane change has a command (`asklog-layout`).
 - The command was called `tl` before; that alias still works but prints a notice.

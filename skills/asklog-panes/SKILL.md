@@ -85,4 +85,4 @@ Always bound a wait with a timeout and say what you saw if it expires.
 asklog kill "$sid"
 ```
 
-Killing a session closes its pane. Kill only sessions you created and recorded. Never kill by title, by `grep`, or by "the one that looks idle", and never kill the person's own sessions or your own.
+Killing a session closes its pane. To take a pane off the screen without ending its process, use `asklog layout close-pane <pane-id>` instead (see `asklog-layout`). Kill only sessions you created and recorded. Never kill by title, by `grep`, or by "the one that looks idle", and never kill the person's own sessions or your own.

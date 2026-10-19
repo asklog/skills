@@ -39,7 +39,7 @@ Every change takes a fresh UUID `requestId`; reuse it when you retry the same ch
 
 Conventions: file only what the person asked for, in their words, and never widen it. Implementation goes to a Worker, never done by Chief itself. Start nothing new without the person's word. A Worker's result counts only after asklog verifies it with the forge; "cannot tell" means stop and say so. Bring merge, cleanup and decisions back to the person as the one action they can take.
 
-Layout commands from these folders need the scoped capability: `asklog layout list --capability "$ASKLOG_CHIEF_CAPABILITY"`, or `op=layout` with `request:{action: list|info|open-tab|split, ...}`.
+Layout commands from these folders need the scoped capability: `asklog layout list --capability "$ASKLOG_CHIEF_CAPABILITY"`, or `op=layout` with `request:{action, ...}` for any `asklog layout` verb (`asklog-layout` lists them). Arrange the window only that way, never with computer use. Your Workers open together in one "Workers" tab by default; `group --workers` gathers any that are spread out.
 
 ## As a Worker
 
