@@ -7,6 +7,7 @@ Each skill is a folder with a `SKILL.md` in the open [Agent Skills](https://agen
 | Skill | Use it to |
 |---|---|
 | [`asklog-cli`](skills/asklog-cli/SKILL.md) | run the core commands (`ls`, `read`, `send`, `new`, `kill`, `layout`), read JSON output, avoid the common mistakes |
+| [`asklog-layout`](skills/asklog-layout/SKILL.md) | organise tabs and panes from the CLI: rename, reorder, close, move between tabs, group (such as Chief's Workers), resize, read and replace the whole arrangement - never with computer use |
 | [`asklog-panes`](skills/asklog-panes/SKILL.md) | find your own pane, split it, start a command or agent beside you, read and type into another pane, wait for it, close it safely |
 | [`asklog-drive-agent`](skills/asklog-drive-agent/SKILL.md) | hand a prompt to another agent in a session and wait for its turn to end using `agentStatus` and `statusSeq` |
 | [`asklog-session-info`](skills/asklog-session-info/SKILL.md) | know what asklog reports about sessions, agents, workspaces, tabs, panes and accounts, with `jq` one-liners |
